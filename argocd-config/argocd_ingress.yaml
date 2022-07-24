@@ -1,6 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    traefik.ingress.kubernetes.io/router.tls: "true"
   labels:
     app: argocd
     app.kubernetes.io/instance: argocd
@@ -18,3 +20,7 @@ spec:
               name: http
         path: /
         pathType: ImplementationSpecific
+  tls:
+    -hosts:
+      - argocd.darrellandranae.com
+    secretName: wildcard-cert-staging
