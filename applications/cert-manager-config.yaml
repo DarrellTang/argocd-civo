@@ -9,9 +9,9 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: cert-mgr-config/
+    path: cert-manager-config/
     repoURL: git@github.com:DarrellTang/argocd-civo.git
-    targetRevision: cert-manager
+    targetRevision: HEAD
   syncPolicy:
     automated: {}
     syncOptions:
