@@ -13,8 +13,8 @@ spec:
       name: letsencrypt-prod
     solvers:
     - dns01:
-      webhook:
-        solverName: "civo"
-        groupName: civo.webhook.okteto.com
-        config:
-          secretName: civo-secret
+        webhook:
+          solverName: "civo"
+          groupName: civo.webhook.okteto.com
+          config:
+            secretName: civo-secret
