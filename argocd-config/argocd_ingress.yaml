@@ -21,6 +21,6 @@ spec:
         path: /
         pathType: ImplementationSpecific
   tls:
-    -hosts:
+    - hosts:
       - argocd.darrellandranae.com
     secretName: wildcard-cert-staging
