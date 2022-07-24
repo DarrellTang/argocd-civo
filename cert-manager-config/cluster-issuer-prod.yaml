@@ -15,6 +15,6 @@ spec:
     - dns01:
         webhook:
           solverName: "civo"
-          groupName: civo.webhook.okteto.com
+          groupName: webhook.okteto.com
           config:
             secretName: civo-secret
