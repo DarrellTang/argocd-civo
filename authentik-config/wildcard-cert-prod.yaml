@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wildcard-cert-prod
+  namespace: authentik
+spec:
+  secretName: wildcard-cert-prod
+  commonName: "*.darrellandranae.com"
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-prod
+  dnsNames:
+  - "*.darrellandranae.com"

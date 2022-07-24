@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: authentik
+  namespace: authentik
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`authentik.darrellandranae.com`)
+      priority: 10
+      services:
+        - name: http
+          port: 80
+  tls:
+    secretName: wildcard-cert-staging
