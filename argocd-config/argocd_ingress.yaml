@@ -15,6 +15,6 @@ spec:
           service:
             name: argo-cd-argocd-server
             port:
-              name: http
+              name: https
         path: /
         pathType: ImplementationSpecific
