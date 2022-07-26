@@ -11,7 +11,7 @@ spec:
       match: Host(`authentik.darrellandranae.com`)
       priority: 10
       services:
-        - name: http
+        - name: authentik
           port: 80
   tls:
     secretName: wildcard-cert-staging
